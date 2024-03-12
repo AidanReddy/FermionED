@@ -1,2 +1,2 @@
 # FermionED
-A few functions for many-body exact diagonalization of many-Fermion Hamiltonians in Julia.
+A few functions for exact diagonalization of many-Fermion Hamiltonians in Julia.
