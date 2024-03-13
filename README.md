@@ -5,7 +5,7 @@ This repository contains a .jl file, FermionED.jl, with a few functions for cons
 The code first constructs a many-body Fock space from a given set of single-particle states. Particle number, spin, and center-of-mass moemntum conservation are exploited as relevant. Each single particle state is assigned an integer index "i" valued between 1 and (total number of single-particle states). Each Fock state $\ket{I}$ is assigned an integer $I = \sum_{i \in occ} 2^i$ where "occ" is a set of occupied single particle states. The $i^{th}$ entry (zero-indexed) of the bit string corresponding to the integer $I$ is 1 if $i \in occ$ and 0 if not. (Note that one could also 0-index the single-particle states, which is perhaps the more natural choice but not the one adopted here. Here, the single-particle states are 1-indexed.) For spinful systems with $N$, spin-up states ar given the indices 1 through N, and spin-down states are given the indices (N+1) through 2N. All manipulations use the functions "C" and "CDag" which implement second quantization entirely through arithmetic operations on the integers I. This methods allows for efficient construction of the many-body Hamiltonian and calculation of observables with a low memory footprint. 
 
 The functions provided here only handle one-and two-body terms, but the "C" and "CDag" functions can be straightforwardly used to handle n-body terms. Explicitly, the functions are designed to handle Hamiltonians of the form
-$ H = T + V$ 
+$H = T + V$ 
 where 
 $T = \sum_{ij,s_is_j} t_{i,s_i,j,s_j} c^{\dagger}_{i,s_i} c_{j,s_j}$
 is the ony-body term and 
