@@ -1,6 +1,6 @@
 # FermionED
 
-This repository contains a .jl file, FermionED.jl, with a few functions for constructing a numerical many-fermion Hamiltonian in the Julia programming language.
+This repository contains a .jl file, FermionED.jl, with a few functions for constructing numerical many-fermion Hamiltonians in the Julia programming language.
 
 The "exact diagonalization" (ED) method is a non-perturbative numerical method for studying quantum many-body systems. Quite simply, one constructs and (partially) diagonalizes a matrix representation of a many-body Hamiltonian. Physical properties can be inferred from the many-body spectrum and eigenstates. It relies on the presence of a finite-dimensional many-body Hilbert space. On a lattice system (e.g. one-band Hubbard model) this comes for free on a finite-system. In a continuum system, the full many-body Hilbert space is infinite dimensional even on a finite size system. In this case, the method typically involves projection onto the Fock space defined by a set of single-particle states that are energetically isolated (e.g. a Bloch band or Landau level) and is therefore variational, rather than "exact". In condensed mattter physics, this method has historically found great use in the study of the fractional quantum Hall effect in partially-filled Landau levels and, more recently, the fractional quantum anomalous Hall effect in partially-filled Chern bands. ED is closely related to the "Full Configuration Interaction" method of quantum chemistry.
 
