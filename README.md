@@ -9,7 +9,7 @@ $ H = T + V$
 where 
 $T = \sum_{ij,s_is_j} t_{i,s_i,j,s_j} c^{\dagger}_{i,s_i} c_{j,s_j}$
 is the ony-body term and 
-$V = \frac{1}{2} \sum_{ijkl,s_js_js_ks_l} V_{i,si,j,sj,k,si,l,sj} c^{\dagger}_{i,s_i} c^{\dagger}_{j,s_j} c_{k,sk} c_{l,sl}$
+$V = \frac{1}{2} \sum_{ijkl,s_js_js_ks_l} V_{i,si,j,sj,k,sk,l,sl} c^{\dagger}_{i,s_i} c^{\dagger}_{j,s_j} c_{k,sk} c_{l,sl}$
 is the two-body term. The matrix elements $t_{i,s_i,j,s_j}$ and $V_{i,s_i,j,s_j,k,s_k,l,s_l}$ must be calculated externally for the physical Hamiltonian of interest.
 
 The functions contained here build a many-body Hamiltonian in the SparseMatrixCSC format from the SparseArrays.jl package. This can be diagonalized using other packages such as KrylovKit.jl ( "eigsolve" function) or Arpack.jl ("eigs" function). 
