@@ -14,7 +14,7 @@ T: one-body part of many-body Hamiltonian
 V: two-body interaction part of many-body Hamiltonian.
 nU: number of "spin-up" fermions
 nD: number of "spin-down" fermions
-Vector: Vector of one-body matrix elements, each of which is a tuple of ComplexF64 and a tuple {t_{i,si,j,sj}, {i, si, j, sj}}
+oneBody: Vector of one-body matrix elements, each of which is a tuple of ComplexF64 and a tuple {t_{i,si,j,sj}, {i, si, j, sj}}
 twoBody: Vector of two-body matrix elements, each of which is a tuple of a ComplexF64 and a tuple {V_{i,si,j,sj,k,si,l,sj}, {i, si, j, sj, k, sk, l, sl}}
 =#
 
