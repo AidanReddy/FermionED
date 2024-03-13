@@ -13,7 +13,7 @@ $H = T + V$ where $T = \sum_{ij,s_i s_j} t_{is_i,js_j} c_{i,s_i}^{\dagger} c_{j,
 
 The functions contained here build a many-body Hamiltonian in the SparseMatrixCSC format from the SparseArrays.jl package. This sparse matrix can be partially diagonalized using other packages such as KrylovKit.jl ( "eigsolve" function) or Arpack.jl ("eigs" function), or converted to a dense matrix and fully diagonalized using LinearAlgebra.jl ("eigen" function).
 
-I originally developed this code for the calculations published in Ref. [1] and have used it in several subsequent publications. I provide further discussion of the exact diagonalization method as applied to moiré superlattice systems in the Supplementary Material of Ref. [2-7]. In developing this code, I benefitted from Ref. [8]. I gratefully acknowledge helpful conversations with Trithep Devakul, Yang Zhang, Di Luo, and Donna Sheng. Finally, I thank Liang Fu for advising the research projects for which I developed and used this code. 
+I originally developed this code for the calculations published in Ref. [1] and have used it in several subsequent publications [2-7]. I provide further discussion of the exact diagonalization method as applied to moiré superlattice systems in the Supplementary Material of Ref. [1]. In developing this code, I benefitted from Ref. [8]. I gratefully acknowledge helpful conversations with Trithep Devakul, Yang Zhang, Di Luo, and Donna Sheng. Finally, I thank Liang Fu for advising the research projects for which I developed and used this code. 
 
 This work is supported by the Air Force Office of Scientific Research (AFOSR) under Award No. FA9550-22-1-0432 and the Simons Investigator award from the Simons Foundation.
 
