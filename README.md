@@ -6,11 +6,11 @@ The basic structure of the code is to construct a many-body Fock space from a gi
 
 The functions provided here only handle one-and two-body terms, but the "C" and "CDag" functions can be straightforwardly used to handle n-body terms. Explicitly, the functions are designed to handle Hamiltonians of the form
 
-$$ H = \sum_{i,j,s} t_{i,s_i,j,s_j} c^{\dagger}_{i,s} c_{j,s} + \frac{1}{2}V_{i,si,j,sj,k,si,l,sj} c^{\dagger}_{i,s_i}c^{\dagger}_{j,s_j}c_{k,sj}c_{l,si}$$.
+$ H = \sum_{ij,s_is_j} t_{i,s_i,j,s_j} c^{\dagger}_{i,s_i} c_{j,s_j} + \frac{1}{2} \sum_{ijkl,s_js_js_ks_l} V_{i,si,j,sj,k,si,l,sj} c^{\dagger}_{i,s_i} c^{\dagger}_{j,s_j} c_{k,sk} c_{l,sl}$.
 
 The matrix elements $t_{i,s_i,j,s_j}$ and $V_{i,s_i,j,s_j,k,s_k,l,s_l}$ must be calculated externally for the physical Hamiltonian of interest.
 
-The functions contained here build a many-body Hamiltonian in SparseArrayCSC format from the SparseArrays.jl package. This can be diagonalized using other packages such as KrylovKit.jl ( "eigsolve" function) or Arpack.jl ("eigs" function). 
+The functions contained here build a many-body Hamiltonian in the SparseMatrixCSC format from the SparseArrays.jl package. This can be diagonalized using other packages such as KrylovKit.jl ( "eigsolve" function) or Arpack.jl ("eigs" function). 
 
 I originally developed for the calculations published in Ref. [2], and have used it in several subsequent publications. I benefitted from Ref. [2].
 
